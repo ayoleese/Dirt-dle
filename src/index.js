@@ -69,7 +69,7 @@ function getCurrentWord() {
 }
 
 function isWordValid(word) { // making sure the list of words in my dictionary is revealed
-    return dictionary.includers(word);
+    return dictionary.includes(word);
 }
 
 function revealWord(guess) { //reveal function, stating if word/letter is in the correct spot
@@ -79,7 +79,7 @@ function revealWord(guess) { //reveal function, stating if word/letter is in the
         const box = document.getElementById(`box${row}${i}`);
         const letter = box.textContent;
 
-        if (letter === state.secret[i]) {
+        if (letter === state.secret[i]) { // states whether the letter is in the word
             box.classList.add('right');
         } else if (state.secret.includes(letter)) {
             box.classList.add('wrong');
