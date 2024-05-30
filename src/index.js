@@ -64,11 +64,11 @@ function registerKeyboardEvents() { //keyboard event listener
     };
 }
 
-function currentRow() {
+function getCurrentWord() {
     return state.grid[state.currentRow].reduce((prev, curr) => prev + curr);
 }
 
-function isWordValid(word) {
+function isWordValid(word) { // making sure the list of words in my dictionary is revealed
     return dictionary.includers(word);
 }
 
